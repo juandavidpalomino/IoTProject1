@@ -1,8 +1,8 @@
 {
-    "name": "IOTHTML",
+    "name": "IOT1",
     "version": "1.0.0",
     "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "Labing",
+    "author": "Juan Palomino & Andres Ortegon",
     "contributors": [],
     "dependencies": {}
 }
