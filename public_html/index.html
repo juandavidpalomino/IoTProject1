@@ -150,7 +150,7 @@
                                             <i class="material-icons">home</i>
                                         </div>
                                         <p class="card-category">Temperature</p>
-                                        <h3 class="card-title"><span id="temperature"></span>
+                                        <h3 class="card-title"><span id="temperature"> ... </span>
                                             <small>°C</small>
                                         </h3>
                                     </div>
@@ -163,7 +163,7 @@
                                             <i class="material-icons">arrow_drop_up</i>
                                         </div>
                                         <p class="card-category">Maximum value</p>
-                                        <h3 class="card-title">42
+                                        <h3 class="card-title"><span id="maximum"> ... </span>
                                             <small>°C</small>
                                         </h3>
                                     </div>
@@ -176,7 +176,7 @@
                                             <i class="material-icons">arrow_drop_down</i>
                                         </div>
                                         <p class="card-category">Minimum value</p>
-                                        <h3 class="card-title">22
+                                        <h3 class="card-title"><span id="minimum"> ... </span>
                                             <small>°C</small>
                                         </h3>
                                     </div>
@@ -184,12 +184,12 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="card card-stats">
-                                    <div class="card-header card-header-success card-header-icon pb-2">
+                                    <div id="led-card" class="card-header card-header-success card-header-icon pb-2">
                                         <div class="card-icon">
                                             <i class="material-icons">highlight</i>
                                         </div>
                                         <p class="card-category">LED Alarm Status</p>
-                                        <h3 class="card-title">OK
+                                        <h3 class="card-title" id="led-text">OK
                                         </h3>
                                     </div>
                                 </div>
@@ -237,100 +237,13 @@
                                         <p class="card-category">Since 21 / 23 / 2019</p>
                                     </div>
                                     <div class="card-body table-responsive" style="height: 500px">
-                                        <table class="table table-hover">
+                                        <table class="table table-hover" id="table">
                                             <thead class="text-warning">
-                                            <th>Date</th>
-                                            <th>Time</th>
+                                            <th>Timestamp</th>
                                             <th>Value</th>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:01 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:02 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:03 a.m.</td>
-                                                    <td>23°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:01 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:02 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:03 a.m.</td>
-                                                    <td>23°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:01 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:02 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:03 a.m.</td>
-                                                    <td>23°C</td>
-                                                </tr><tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:01 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:02 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:03 a.m.</td>
-                                                    <td>23°C</td>
-                                                </tr><tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:01 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:02 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:03 a.m.</td>
-                                                    <td>23°C</td>
-                                                </tr><tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:01 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:02 a.m.</td>
-                                                    <td>22°C</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>28/08/2019</td>
-                                                    <td>8:37:03 a.m.</td>
-                                                    <td>23°C</td>
-                                                </tr>
+                                                
                                             </tbody>
                                         </table>
                                     </div>
@@ -376,7 +289,8 @@
         <script src="assets/js/material-dashboard.min.js?v=2.1.1" type="text/javascript"></script>
         <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 
-        <script src="assets/js/index.js"></script>
+        <script src="assets/.js"></script>
+        <script src="index.js"></script>
         <script>
             $(document).ready(function () {
                 // Javascript method's body can be found in assets/js/demos.js
