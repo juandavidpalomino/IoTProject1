@@ -1,70 +1,12 @@
-// UMD
-(function (factory) {
-    "use strict";
-
-    if (typeof define === 'function' && define.amd) {
-        // AMD
-        define(['jquery'], function ($) {
-            return factory($, window, document);
-        });
-    } else if (typeof exports === 'object') {
-        // CommonJS
-        module.exports = function (root, $) {
-            if (!root) {
-                root = window;
-            }
-
-            if (!$) {
-                $ = typeof window !== 'undefined' ?
-                        require('jquery') :
-                        require('jquery')(root);
-            }
-
-            return factory($, root, root.document);
-        };
-    } else {
-        // Browser
-        factory(jQuery, window, document);
-    }
-}
-(function ($, window, document) {
-
-
-    $.fn.dataTable.render.moment = function (from, to, locale) {
-        // Argument shifting
-        if (arguments.length === 1) {
-            locale = 'en';
-            to = from;
-            from = 'YYYY-MM-DD';
-        } else if (arguments.length === 2) {
-            locale = 'en';
-        }
-
-        return function (d, type, row) {
-            var m = window.moment(d, from, locale, true);
-
-            // Order and type get a number value from Moment, everything else
-            // sees the rendered value
-            return m.format(type === 'sort' || type === 'type' ? 'x' : to);
-        };
-    };
-
-
-}));
-
 
 $(document).ready(function () {
     setTemp(32.33);
     setMax(42.33);
     setMin(22.33);
-
-
-
-
 });
 
 var table = $("#table").DataTable({
-//        ajax:           "../data/2500.txt",
+    ajax: "../data/2500.txt",
     deferRender: true,
     scrollY: 350,
     scrollCollapse: true,
@@ -105,6 +47,7 @@ function triggerAlarm() {
     });
     $("#led-card").removeClass('card-header-success').addClass('card-header-danger');
     $("#led-text").html('PELIGRO');
+    $("#btn-alarm").removeClass('hidden');
 
 }
 
@@ -117,5 +60,6 @@ function dismissAlarm() {
             );
     $("#led-card").removeClass('card-header-danger').addClass('card-header-success');
     $("#led-text").html('OK');
+    $("#btn-alarm").addClass('hidden');
 }
 
