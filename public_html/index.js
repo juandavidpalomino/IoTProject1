@@ -1,5 +1,7 @@
 var address = "http://192.168.0.12:1880/";
 var tab = "";
+
+// al estar lista la página
 $(document).ready(function () {
     setTemp(32.33);
     setMax(42.33);
@@ -20,18 +22,21 @@ $(document).ready(function () {
 
 });
 
+// funcion para iniciar el monitoreo
 function start() {
     $.ajax({
         url: address + 'start'
     });
 }
 
+// funcion para eliminar los registros 
 function reset() {
     $.ajax({
         url: address + 'reset'
     });
 }
 
+//función para parar de monitorear
 function stop() {
     $.ajax({
         url: address + 'stop'
@@ -42,6 +47,8 @@ function stop() {
 var minuteChart = "";
 var maxtemp = 0;
 var mintemp = 1000;
+
+// realizar llamadas ajax y actualizar tabla y grafica deacuerdo con los nuevos datos
 function updateAjax() {
 
     $.ajax({
@@ -49,6 +56,7 @@ function updateAjax() {
         success: function (respuesta) {
             var obj = JSON.parse(respuesta);
             obj.splice(0, obj.length - 20);
+            
             // Refresh Table
             tab.clear();
             for (var r in obj) {
@@ -94,12 +102,11 @@ function updateAjax() {
             }
             minuteChart = new Chartist.Line('#minute', dataMinute, optionsMinute);
 
-            //Update Temp
+            //Update Temperature
             var thistemp = obj[obj.length - 1].temp
             setTemp(thistemp);
 
-
-
+            // Llamado recursivo
             setTimeout(updateAjax(), 500)
         },
         error: function () {
@@ -134,12 +141,12 @@ function updateAjax() {
     });
 }
 
+// mostrar dialogo de modificar limite
 function limitDialog() {
     $('#exampleModal').modal('show');
 }
 
-
-
+// fijar el limite nuevo
 function setLimit() {
     
     var value = $('#limitinput').val();
@@ -161,17 +168,19 @@ function setLimit() {
     });
 }
 
-
+// set de temperatura
 function setTemp(t) {
     $("#temperature").html(t)
     console.log(t);
 }
 
+// set de temperatura maxima
 function setMax(t) {
     $("#maximum").html(t)
     console.log(t);
 }
 
+// set de temperatura minima
 function setMin(t) {
     $("#minimum").html(t)
     console.log(t);
@@ -179,6 +188,7 @@ function setMin(t) {
 
 var alarmOn = false;
 
+// desencadenar una alerta de temperatura
 function triggerAlarm() {
     console.log("triggered");
     if (!alarmOn) {
@@ -197,6 +207,7 @@ function triggerAlarm() {
 
 }
 
+// descartar la alarma
 function dismissAlarm() {
     
     alarmOn = false;
