@@ -42,7 +42,7 @@ Como criterios de diseño, optamos por una infraestructura local, y le dimos ind
 Para lograr el funcionamiento de la aplicación web, escribimos más de 200 lineas de código JS que se puede encontrar en el directorio [del repositorio](https://github.com/juandavidpalomino/IoTProject1/tree/master/public_html), bajo el nombre de index.js. Se comentó y organizó para mejor visualización.
 
 ## Resultados
-Al final del proyecto logramos alcanza las metas mínimas y aún avanzamos mucho más en tema de Interfaz Amigable, Fijar los límites de temperatura, y más. 
+Al final del proyecto logramos alcanza las metas mínimas y aún avanzamos mucho más en tema de Interfaz Amigable, Fijar los límites de temperatura, y más. A través de una plataforma de monitoreo conectada por APIs a una Raspberry Pi, pudimos ofrecer una solución al problema planteado y logramos de paso adquirir conocimiento y experiencia en aplicaciones IoT con Node-Red, Raspberry Pi y Javascript.
 ![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc22.png)
 
 ## Créditos
