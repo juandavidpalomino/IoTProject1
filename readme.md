@@ -5,7 +5,7 @@ en recitos cerrados utilizando la plataforma Raspberry Pi 3, el sensor digital d
 actuador LED y una interface web local.
 
 ## Características
-[[https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc1.png|alt=octocat]]
+![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc1.png)
 Este proyecto permite las siguientes capacidades:
 * Monitorear la temperatura actual del sensor
 * Llevar registro histórico de las temperaturas
@@ -27,13 +27,13 @@ node-red-start
 Realizamos los siguientes diagramas para la realización del proyecto:
 
 Diagrama de comunicación entre componentes del sistema IoT:
-[[https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc1.jpg|alt=octocat]]
+![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc1.jpg)
 
 Diagrama de circuitos:
-[[https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc23.jpg|alt=octocat]]
+![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc23.jpg)
 
 Diagrama de bloques de Node-Red:
-[[https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc3.png|alt=octocat]]
+![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc3.png)
 
 ## Criterios de diseño
 Como criterios de diseño, optamos por una infraestructura local, y le dimos independencia al backend (manejo de información) para controlar y guardar la información de registro de forma independiente. Para la comunicación, usamos servicios REST mediante los cuales la aplicación web se conecta a la aplicación de Node-Red y mediante funciones de Javascript, se logra controlar el funcionamiento y entregar información valiosa para la vista. Buscamos un diseño limpio, fácil de entender, claro y modular, y utilizamos variables globales con el fin de utilizarlas entre flows distintos.
@@ -43,7 +43,7 @@ Para lograr el funcionamiento de la aplicación web, escribimos más de 200 line
 
 ## Resultados
 Al final del proyecto logramos alcanza las metas mínimas y aún avanzamos mucho más en tema de Interfaz Amigable, Fijar los límites de temperatura, y más. 
-[[https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc22.png|alt=octocat]]
+![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc22.png)
 
 ## Créditos
 Realizado por Andrés Ortegón y Juan Palomino
