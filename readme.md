@@ -14,6 +14,7 @@ Este proyecto permite las siguientes capacidades:
 * Descartar la alerta por temperatura
 * Ver una gráfica de la temperatura en las últimas 20 mediciones
 
+## Instrucciones
 Para su programación, se utilizó Node-Red, se creó un proceso recurrente al iniciar el sistema y se configuró el servidor para almacenar los archivos de la página web, y la administración en la dirección /admin. 
 
 ```bash
