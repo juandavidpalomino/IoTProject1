@@ -74,14 +74,19 @@ Como criterios de diseño, optamos por una infraestructura local, y le dimos ind
 ## Programación JS
 Para lograr el funcionamiento de la aplicación web, escribimos más de 200 lineas de código JS que se puede encontrar en el directorio [del repositorio](https://github.com/juandavidpalomino/IoTProject1/tree/master/public_html), bajo el nombre de index.js. Las lineas de código y funciones se organizaron y comentaron para mejor visualización y comprensión del código. La comunicación se realiza técnicamente a través de llamadas AJAX y la modificación del DOM a través de JavaScript y jQuery, tal como se puede ver en el código.
 
-## Resultados
-Al final del proyecto logramos alcanza las metas mínimas y aún avanzamos mucho más en tema de Interfaz Amigable, Fijar los límites de temperatura, y más. A través de una plataforma de monitoreo conectada por APIs a una Raspberry Pi, pudimos ofrecer una solución al problema planteado y logramos de paso adquirir conocimiento y experiencia en aplicaciones IoT con Node-Red, Raspberry Pi y Javascript.
+## Imágenes
 
 ![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc22.png)
+
 Resultado de mostar alarma en la interfaz gráfica, con botón para apagar la misma.
 
 ![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc6.png)
+
 Cuadro de diálogo para cambiar el límite por defecto de la alarma.
+
+## Resultados
+Al final del proyecto logramos alcanza las metas mínimas y aún avanzamos mucho más en tema de Interfaz Amigable, Fijar los límites de temperatura, y más. A través de una plataforma de monitoreo conectada por APIs a una Raspberry Pi, pudimos ofrecer una solución al problema planteado y logramos de paso adquirir conocimiento y experiencia en aplicaciones IoT con Node-Red, Raspberry Pi y Javascript.
+
 
 ## Créditos
 Realizado por Andrés Ortegón y Juan Palomino
