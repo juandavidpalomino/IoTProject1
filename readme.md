@@ -29,7 +29,7 @@ Para lograr alojar y servir los archivos de la página web, se ubicaron en una c
     httpStatic: 'nodestatic/',
 ```
 
-Esta carpeta y todo su contenido se hacen disponibles en la raíz del servidor de NodeRed. 
+Esta carpeta y todo su contenido se hacen disponibles en la raíz del servidor de NodeRed. El archivo settings.js se encuentra en la dirección ~/.node-red/ y todas sus características se encuentran en la [documentación de NodeRed.](https://nodered.org/docs/user-guide/runtime/settings-file)
 
 El template se descargó gratuitamente desde [el sitio web de Creative Tim](https://www.creative-tim.com/product/material-dashboard) , desde donde se optimizó y modifico hasta la forma que se ve en el presente repositorio.
 
