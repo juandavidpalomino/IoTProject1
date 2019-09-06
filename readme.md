@@ -76,8 +76,12 @@ Para lograr el funcionamiento de la aplicación web, escribimos más de 200 line
 
 ## Resultados
 Al final del proyecto logramos alcanza las metas mínimas y aún avanzamos mucho más en tema de Interfaz Amigable, Fijar los límites de temperatura, y más. A través de una plataforma de monitoreo conectada por APIs a una Raspberry Pi, pudimos ofrecer una solución al problema planteado y logramos de paso adquirir conocimiento y experiencia en aplicaciones IoT con Node-Red, Raspberry Pi y Javascript.
+
 ![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc22.png)
+Resultado de mostar alarma en la interfaz gráfica, con botón para apagar la misma.
+
 ![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc6.png)
+Cuadro de diálogo para cambiar el límite por defecto de la alarma.
 
 ## Créditos
 Realizado por Andrés Ortegón y Juan Palomino
