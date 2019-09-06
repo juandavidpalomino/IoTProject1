@@ -1,4 +1,5 @@
 # Intermediate Project #1
+### IOT - Prof. Juan Manuel King
 
 Se implementó una solución IoT para la monitorización de temperatura y generación de alertas tempranas en recitos cerrados utilizando la plataforma Raspberry Pi 3, el sensor digital de temperatura DS18B20, un actuador LED y una interface web local.
 
