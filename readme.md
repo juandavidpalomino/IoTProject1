@@ -35,27 +35,38 @@ El template se descargó gratuitamente desde [el sitio web de Creative Tim](http
 ## Diagramas
 Realizamos los siguientes diagramas para la realización del proyecto:
 
-Diagrama de comunicación entre componentes del sistema IoT:
-![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc1.jpg)
+### Diagrama de comunicación entre componentes del sistema IoT:
+
 La sección web se comunica constantemente con la REST API de Node Red a través de solicitudes GET de HTTP para consultar datos como los últimos registros, la temperatura actual, la situación de la alarma actual, el límite actual y más. También es capaz de enviar parámetros como apagar la alarma o cambiar el límite de advertencia desde la interfaz web a través igualmente de solicitudes web.
 
-Diagrama de circuitos:
-![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc23.jpg)
+![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc1.jpg)
+
+### Diagrama de circuitos:
+
 Aquí mostramos la distribución física de las conexiones entre la Raspberry Pi y el protoboard de prototipo.
 
-Diagrama de bloques de Node-Red:
-![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc3.png)
+![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc23.jpg)
+
+### Diagrama de bloques de Node-Red:
+
 Se utilizó un flujo sencillo que se repite cada periodo determinado de tiempo, tal como se ve en el siguiente diagrama de flujo.
 
-Diagrama de flujo:
+![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc3.png)
+
+### Diagrama de flujo:
+
+Aquí mostramos el flujo que se utiliza para controlar el funcionamiento correcto del sistema, la detección de temperatura peligrosa y el control de la alarma:
+
 ![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc5.png)
 
 ## Entendiendo el funcionamiento del sensor de temperatura 
+<img width="200" ALIGN=”right” alt="portfolio_view" src="https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc4.png">
+
 El DS18B20 es un sensor digital de temperatura que utiliza el protocolo 1-Wire para comunicarse, este protocolo necesita solo un pin de datos para comunicarse y permite conectar más de un sensor en el mismo bus.
 El sensor DS18B20 es fabricado por Maxim Integrated, el encapsulado de fabrica es tipo TO-92 similar al empleado en transistores pequeños.
 Con este sensor podemos medir temperatura desde los -55°C hasta los 125°C y con una resolución programable desde 9 bits hasta 12 bits.
 Cada sensor tiene una dirección única de 64bits establecida de fábrica, esta dirección sirve para identificar al dispositivo con el que se está comunicando, puesto que en un bus 1-wire pueden existir más de un dispositivo.
-![alt text](https://raw.githubusercontent.com/juandavidpalomino/IoTProject1/master/public_html/docs/doc4.png)
+
 
 ## Criterios de diseño
 Como criterios de diseño, optamos por una infraestructura local, y le dimos independencia al backend (manejo de información) para controlar y guardar la información de registro de forma independiente. Para la comunicación, usamos servicios REST mediante los cuales la aplicación web se conecta a la aplicación de Node-Red y mediante funciones de Javascript, se logra controlar el funcionamiento y entregar información valiosa para la vista. Buscamos un diseño limpio, fácil de entender, claro y modular, y utilizamos variables globales con el fin de utilizarlas entre flows distintos.
